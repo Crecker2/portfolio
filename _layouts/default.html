@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% include metas.html %}
+    <title>{{site.title}}</title>
+    {% include general.html %}
+  </head>
+  <body>
+    <!-- navigation -->
+  	<nav class="navbar navbar-toggleable-sm navbar-inverse bg-primary">
+  	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  	    <span class="navbar-toggler-icon"></span>
+  	  </button>
+  		  <div class="navbar-brand" href="#">Joshua Fayer</div>
+
+  	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  	    <ul class="navbar-nav mr-auto">
+  	      <li class="nav-item active">
+  	        <a class="nav-link" href="#">Portfolio<span class="sr-only">(current)</span></a>
+  	      </li>
+  	      <li class="nav-item">
+  	        <a class="nav-link" href="https://www.joshuafayer.com/">Back to main website</a>
+  	      </li>
+  	    </ul>
+  	  </div>
+  	</nav>
+
+    <!-- labels -->
+  	<div id="labelcontainer" class="container">
+  		<div class="list-group-item labels noselect">
+  			<div style="margin: 0 auto">
+  				<button class="sorts" data-sort="*"><p class="active">All</p></button>
+  				<button class="sorts" data-sort=".design"><p>Design</p></button>
+  				<button class="sorts" data-sort=".content-writing"><p>Content Writing</p></button>
+  				<button class="sorts" data-sort=".music"><p>Music</p></button>
+  				<button class="sorts" data-sort=".web-dev"><p>Web Development</p></button>
+  				<button class="sorts" data-sort=".social"><p>Social Media</p></button>
+  				<button class="sorts" data-sort=".internship"><p>Internship Work</p></button>
+  			</div>
+  		</div>
+  	</div>
+
+  		<!-- cards -->
+	<div class="container-fluid">
+		<div class="columns">
+      {% for card in site.cards %}
+
+        <div class="card{% for tag in card.tags %}{% for tagmeta in site.tagdata %}{% if tag == tagmeta.name %} {{tagmeta.sortby}}{% endif %}{% endfor %}{% endfor %}">
+          <h3 class="card-header">{{card.title}}</h3>
+          {% if card.img %}
+            <img src="/assets/images/{{card.img}}" class="card-img-top" alt="{{card.alt}}">
+          {% endif %}
+          <div class="list-group-item">
+            {% for tag in card.tags %}
+              {% for tagmeta in site.tagdata %}
+                {% if tag == tagmeta.name %}
+                  <button class="sorts" data-sort=".{{tagmeta.sortby}}"><p>{{tagmeta.name}}</p></button>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+          <div class="card-block">
+            <p>{{card.content}}</p>
+            <button class="btn btn-large" id="{{card.id}}" data-toggle="modal" data-target="{{card.modaltarget}}">Read More</button>
+            <div class="fixer"></div>
+          </div>
+        </div>
+      {% endfor%}
+
+      {% for post in site.posts %}
+        <h1>{{post.title}}</h1>
+      {% endfor %}
+      <!-- modals -->
+      {% for modal in site.modals %}
+        <div class="modal fade" id="{{modal.ident}}" tabindex="-1" role="dialog" aria-labelledby="{{modal.label}}" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="{{modal.label}}">{{modal.title}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                {% if modal.img %}
+                  {% if modal.imgsrc %}
+                    <a target="_blank" href="{{modal.imgsrc}}"><img class="modal-image" src="/assets/images/{{modal.img}}" alt="{{modal.alt}}"></a>
+                  {% else %}
+                    <a target="_blank" href="/assets/images/{{modal.img}}"><img class="modal-image" src="/assets/images/{{modal.img}}" alt="{{modal.alt}}"></a>
+                  {% endif %}
+                {% endif %}
+                {{modal.content}}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+		</div> <!--card-columns closure-->
+	</div> <!--container closure-->
+
+  <!-- my js -->
+  <script type="text/javascript" src="js/scripts.js"></script>
+
+
+  </body>
+</html>

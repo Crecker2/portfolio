@@ -1,0 +1,7 @@
+title: Joshua Fayer Portfolio
+baseurl: ""
+url: www.joshuafayer.com/portfolio
+collections:
+  - cards
+  - modals
+  - tagdata
