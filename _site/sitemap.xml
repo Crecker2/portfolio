@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://portfolio.joshuafayer.com/</loc>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
-<<<<<<< HEAD
 <loc>http://localhost:4000/google5e159c9336e70c08.html</loc>
 <lastmod>2018-10-28T09:15:40-04:00</lastmod>
-=======
-<loc>https://portfolio.joshuafayer.com/google5e159c9336e70c08.html</loc>
-<lastmod>2018-10-28T13:15:40+00:00</lastmod>
->>>>>>> 86544a2b7cea686f8b44b0c2227edfb7ede6dec1
 </url>
 </urlset>
