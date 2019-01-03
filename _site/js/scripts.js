@@ -12,7 +12,7 @@ $(document).ready(function(){
 			columnWidth: 375,
 			fitWidth: true
 		});
-	});;
+  });
 
 	$('.list-group-item').on( 'click', 'button', function() {
 		  var filterValue = $( this ).attr('data-sort');
