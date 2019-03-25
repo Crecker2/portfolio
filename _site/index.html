@@ -6,7 +6,7 @@
 
 <meta property="og:title" content="Joshua Fayer Portfolio" />
 <meta property="og:description" content="A portfolio for my work." />
-<meta property="og:url" content="/" />
+<meta property="og:url" content="www.joshuafayer.com/portfolio" />
 <meta property="og:image" content="/favicon.ico" />
 
 <meta name="twitter:card" content="summary_large_image">
@@ -26,6 +26,16 @@
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500" rel="stylesheet">
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90343467-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90343467-7');
+</script>
 
   </head>
   <body>
@@ -66,6 +76,55 @@
   		<!-- cards -->
 	<div class="container-fluid">
 		<div class="columns">
+      
+
+        <div class="card web-dev content-writing">
+          <h3 class="card-header">Personal Blog Site Development</h3>
+          
+            <img src="/assets/images/blog.png" class="card-img-top" alt="Above-the-fold of my blog homepage.">
+          
+          <div class="list-group-item">
+            
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <button class="sorts" data-sort=".web-dev"><p>Web Development</p></button>
+                
+              
+            
+              
+                
+                  <button class="sorts" data-sort=".content-writing"><p>Content Writing</p></button>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            
+          </div>
+          <div class="card-block">
+            <p><p>I developed a blog theme, wrote several articles, and an assembled an analytics package to track performance of the content I post to the site.</p>
+</p>
+            <button class="btn btn-large" id="/cards/blog" data-toggle="modal" data-target="#blog">Read More</button>
+            <div class="fixer"></div>
+          </div>
+        </div>
       
 
         <div class="card design web-dev content-writing">
@@ -125,7 +184,7 @@
             
           </div>
           <div class="card-block">
-            <p><p>For the past 3 years, I have assisted my former high school civics class in writing a bill and advocating its passage through Congress. The bill currently resides in the House and the Senate, where it has cleared both of its committees and awaits a floor vote. I created a press website and resources to help with media coverage, and made contributions to the main website, as well.</p>
+            <p><p>In 2015, my former high school civics class wrote the  <em>Civil Rights Cold Case Records Collection Act</em>, a bipartisan bill which seeks justice for the victims of civil rights cold cases. The bill was signed into law in January 2019 after more than three years of lobbying. While working on the bill, I contacted reporters, participated in interviews, and created a press website to assist in media outreach efforts.</p>
 </p>
             <button class="btn btn-large" id="/cards/cca" data-toggle="modal" data-target="#cca">Read More</button>
             <div class="fixer"></div>
@@ -626,6 +685,30 @@
 		</div> <!--card-columns closure-->
 
     
+      <div class="modal fade" id="blog" tabindex="-1" role="dialog" aria-labelledby="blogLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="blogLabel">Personal Blog Site Development</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+                
+                  <a target="_blank" href="https://blog.joshuafayer.com/"><img class="modal-image" src="/assets/images/blog.png" alt="Above-the-fold of my blog homepage."></a>
+                
+              
+              <p>For a public relations course at the S.I. Newhouse School of Public Communications, I was required to launch my own blog. I opted to develop a static site loosely based off of a <a href="https://jekyllrb.com">Jekyll</a> theme I had repurposed for my <a href="https://fayer.me/portfolio#studysite">Study Site</a>.</p>
+
+<p>I upgraded my Google Analytics suite using the <a href="https://tagmanager.google.com/">Google Tag Manager</a> interface, creating a new metric that tracks the scroll depth of each page. This allows me to tell how far down each blog page the average user scrolls. This, combined with other built-in analytics, such as session duration, allow me to develop a decent sense of how well my audience engages with the content I post.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    
       <div class="modal fade" id="cca" tabindex="-1" role="dialog" aria-labelledby="ccaLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
@@ -641,11 +724,11 @@
                   <a target="_blank" href="https://coldcaseact.com/"><img class="modal-image" src="/assets/images/cca.png" alt="The Capitol Building."></a>
                 
               
-              <p>In my senior year in high school, my AP U.S. Government class drafted the Civil Rights Cold Case Records Collection Act of 2016. In May 2017, our legislation was <a href="https://www.congress.gov/bill/115th-congress/house-bill/1272">introduced by Representative Bobby Rush into the House Committee on Oversight and Government Reform</a>. In August 2018, it was <a href="https://www.congress.gov/bill/115th-congress/senate-bill/3191">introduced by Senator Doug Jones into the Senate Committee on Homeland Security and Governmental Affairs</a>. Since then, it has cleared both committees, and has gained the vocal support of key legislative actors across the aisle, including Senator Kamala Harris (D-CA), Senator Claire McCaskill (D-MO), and Senator Ted Cruz (R-TX), as well as 24 cosponsors in the House of Representatives.</p>
+              <p>In my senior year in high school, my AP U.S. Government class drafted the <em>Civil Rights Cold Case Records Collection Act</em>, a bipartisan bill which seeks justice for the victims of civil rights cold cases. The bill was fervently supported by Senators Doug Jones (D-AL) and Ted Cruz (D-TX), who campaigned in the Senate to pass the legislation. The Cold Case Act was passed near-unanimously through Congress, and <a href="https://press.coldcaseact.com/cold-case-act-signed-into-law">signed into law on Jan. 8, 2019</a>.</p>
+
+<p>To support our media outreach efforts, I built a <a href="https://jekyllrb.com/">Jekyll</a>-powered <a href="https://press.coldcaseact.com/">press website</a> from scratch, and developed content for the website such as press releases, graphics, and a “staff” directory layout. Using <a href="https://analytics.google.com/">Google Analytics</a>, I was able to track the performance of press releases in real-time.</p>
 
 <p>On the main <a href="https://www.coldcaseact.com/">Cold Case Act</a> website, I helped to write content and used the <a href="https://www.propublica.org/datastore/api/propublica-congress-api">Congress Propublica API</a> to build an <a href="https://www.coldcaseact.com/#our-supporters">automatically refreshing list</a> of our cosponsors in Congress.</p>
-
-<p>I also built from scratch a <a href="https://jekyllrb.com/">Jekyll</a>-powered <a href="https://press.coldcaseact.com/">press website</a>, and developed content such as press releases, graphics, and a “staff” directory layout.</p>
 
             </div>
           </div>
