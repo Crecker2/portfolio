@@ -256,7 +256,30 @@ p.active {
 	text-decoration: underline;
 }
 
+.background{
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	background-color: #fff;
+	width: 80%;
+	margin: 0 auto;
+	padding: 50px;
+}
 
+.sectionheader{
+	margin: 15px 0px;
+}
+.sectionheader h1{
+	font-size: 3rem;
+}
+
+.background a{
+	display: inline;
+	color: #31b3ff;
+	transition: .3s all;
+}
+
+.background a:hover{
+	color: #7731ff;
+}
 
 @media(max-width: 600px){
 	.card{

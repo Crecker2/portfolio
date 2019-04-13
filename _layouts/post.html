@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% include metas.html %}
+    <meta charset="utf-8">
+    <title>{{page.title}}</title>
+    {% include general.html %}
+  </head>
+  <body>
+    {% include nav.html %}
+    <div class="background">
+      <div class="sectionheader">
+        <h1>{{page.title}}</h1>
+        {{page.date | date: "%-d %B, %Y"}}
+      </div>
+      {{content}}
+    </div>
+
+    <script src="{{'/js/scripts.js' | absolute_url}}" charset="utf-8"></script>
+  </body>
+</html>

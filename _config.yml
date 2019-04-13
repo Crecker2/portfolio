@@ -1,6 +1,7 @@
 title: Joshua Fayer Portfolio
 baseurl: ""
 url: www.joshuafayer.com/portfolio
+permalink: /:title/
 collections:
   - cards
   - modals
