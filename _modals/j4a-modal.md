@@ -7,7 +7,7 @@ imgsrc: 'https://joe30330.com'
 alt: A banner created for the Josh For America presidential campaign website.
 ---
 
-It was a serious case of right place, right time. While watching the July 31, 2019 Democratic debate, my best friend caught Joe Biden's slip-up when he told the country to "go to Joe 30330." With a quick wit and fast fingers, he was the first to buy the domain name [Joe30330.com](http://joe30330.com).
+It was a serious case of right place, right time. While watching the July 31, 2019 Democratic debate, my best friend caught Joe Biden's slip-up when he told the country to "go to Joe 30330" instead of "text 'Joe' to 30330." With a quick wit and fast fingers, he was the first to buy the domain name [Joe30330.com](http://joe30330.com).
 
 After a few minutes of brainstorming what to do with it, a suddenly obvious choice popped into our heads: [Josh for America](https://joshforamerica.com), a joking website I had built in a hurried afternoon a few months earlier, on April 1st, which launched my presidential exploratory committee.
 
