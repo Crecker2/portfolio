@@ -28,8 +28,9 @@
   		<!-- cards -->
 	<div class="container-fluid">
 		<div class="columns">
-      {% for card in site.cards %}
-
+      {% assign sortedcards = site.cards | sort: 'order' %}
+      {% for card in sortedcards | sort: card.sort %}
+        {% if card.pin %}
         <div class="card{% for tag in card.tags %}{% for tagmeta in site.tagdata %}{% if tag == tagmeta.name %} {{tagmeta.sortby}}{% endif %}{% endfor %}{% endfor %}">
           <h3 class="card-header">{{card.title}}</h3>
           {% if card.img %}
@@ -50,8 +51,32 @@
             <div class="fixer"></div>
           </div>
         </div>
+        {% endif %}
       {% endfor%}
-
+      {% for card in site.cards %}
+        {% unless card.pin %}
+        <div class="card{% for tag in card.tags %}{% for tagmeta in site.tagdata %}{% if tag == tagmeta.name %} {{tagmeta.sortby}}{% endif %}{% endfor %}{% endfor %}">
+          <h3 class="card-header">{{card.title}}</h3>
+          {% if card.img %}
+            <img src="/assets/images/{{card.img}}" class="card-img-top" alt="{{card.alt}}">
+          {% endif %}
+          <div class="list-group-item">
+            {% for tag in card.tags %}
+              {% for tagmeta in site.tagdata %}
+                {% if tag == tagmeta.name %}
+                  <button class="sorts" data-sort=".{{tagmeta.sortby}}"><p>{{tagmeta.name}}</p></button>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+          <div class="card-block">
+            <p>{{card.content}}</p>
+            <button class="btn btn-large" id="{{card.id}}" data-toggle="modal" data-target="{{card.modaltarget}}">Read More</button>
+            <div class="fixer"></div>
+          </div>
+        </div>
+        {% endunless %}
+      {% endfor%}
       <!-- modals -->
 		</div> <!--card-columns closure-->
 

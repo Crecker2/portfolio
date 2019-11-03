@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>www.joshuafayer.com/portfolio/code-of-ethics/</loc>
+<loc>http://localhost:4000/code-of-ethics/</loc>
 <lastmod>2018-04-13T00:00:00-04:00</lastmod>
 </url>
 <url>
-<loc>www.joshuafayer.com/portfolio/</loc>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>www.joshuafayer.com/portfolio/google5e159c9336e70c08.html</loc>
-<lastmod>2018-10-28T09:15:40-04:00</lastmod>
+<loc>http://localhost:4000/google5e159c9336e70c08.html</loc>
+<lastmod>2019-08-25T15:12:37-04:00</lastmod>
 </url>
 </urlset>
