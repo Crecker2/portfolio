@@ -29,7 +29,7 @@
 	<div class="container-fluid">
 		<div class="columns">
       {% assign sortedcards = site.cards | sort: 'order' %}
-      {% for card in sortedcards | sort: card.sort %}
+      {% for card in sortedcards %}
         {% if card.pin %}
         <div class="card{% for tag in card.tags %}{% for tagmeta in site.tagdata %}{% if tag == tagmeta.name %} {{tagmeta.sortby}}{% endif %}{% endfor %}{% endfor %}">
           <h3 class="card-header">{{card.title}}</h3>
